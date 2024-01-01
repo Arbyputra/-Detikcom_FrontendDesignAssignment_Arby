@@ -10,7 +10,6 @@ body {
   align-items: center;
   position: fixed;
   background-color: #ffffffd5;
-  /* Warna latar belakang header */
   border-radius: 50px;
   margin-top: 30px;
   margin-left: 170px;
@@ -43,8 +42,8 @@ body {
 .register-button {
   font-family: Arial, sans-serif;
   background-color: #007BFF;
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 5px 15px;
+  border-radius: 50px;
   color: #fff;
   border: none;
   font-weight: bold;
@@ -63,13 +62,6 @@ body {
   background-position: center;
   overflow: hidden;
   height: 100vh;
-}
-
-/* Media query untuk ukuran layar yang lebih kecil */
-@media screen and (max-width: 768px) {
-  .bg {
-    background-size: cover;
-  }
 }
 
 .event {
@@ -125,7 +117,6 @@ body {
   width: 90%;
   height: 70%;
   margin-bottom: 15px;
-  /* Jarak antara gambar dan teks */
 }
 
 .box2 {
@@ -204,7 +195,7 @@ body {
 
 .daftar-button {
   margin-top: 2%;
-  width: 10%;
+  width: 12%;
   height: 50px;
   border-radius: 50px;
   background-color: rgb(255, 208, 0);
@@ -245,7 +236,6 @@ body {
 
   100% {
     transform: translateX(-50%);
-    /* Pindahkan gambar ke arah kanan */
   }
 }
 
@@ -278,19 +268,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 3;
 }
 
 .title-sec3 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 
 .carousel-inner {
-  width: 55%;
   margin-top: 3%;
 }
 
@@ -299,21 +285,28 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .thumbnail,
 .thumbnail1,
 .thumbnail2,
 .thumbnail3 {
-  margin-right: 1%;
+  max-width: 100%;
   border-radius: 10%;
-  filter: brightness(70%); /* Gaya thumbnail yang tidak aktif */
+  filter: brightness(70%);
+}
+
+.thumbnail img,
+.thumbnail1 img,
+.thumbnail2 img,
+.thumbnail3 img {
+  width: 97%;
 }
 
 .thumbnail-active {
   border-radius: 10%;
-  filter: brightness(100%); /* Gaya thumbnail yang aktif */
+  filter: brightness(100%);
 }
 
 
@@ -347,6 +340,18 @@ body {
   margin-right: 30px;
   color: #fff;
   text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.artikel-button {
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .foto,
@@ -360,16 +365,16 @@ body {
   margin-top: 3%;
   justify-content: center;
   flex-direction: row;
-  
+
 }
 
-.tmb-artikel a{
+.tmb-artikel a {
   margin-right: 1%;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
 
-.tmb-artikel a:hover{
+.tmb-artikel a:hover {
   transform: scale(1.1);
 }
 
@@ -384,13 +389,25 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .teks-artikel-all h4 {
   font-size: 105%;
   width: 20%;
-  margin: 10px;
+  margin-top: 1%;
+}
+
+.teks-artikel {
+  margin-left: 19%;
+}
+
+.teks-artikel1 {
+  margin-left: 1%;
+
+}
+
+.teks-artikel2 {
+  margin-left: 1%;
 }
 
 .date-artikel-all {
@@ -401,15 +418,196 @@ body {
 }
 
 .date-artikel {
-  margin-right: 9.5%;
+  margin-right: 9.4%;
 }
 
 .date-artikel1 {
-  margin-right: 9.3%;
+  margin-right: 9.4%;
+}
+
+.date-artikel5 {
+  margin-right: 9.7%;
 }
 
 .footer {
   width: 100%;
   display: flex;
   margin-top: 10%;
+}
+
+
+@media (min-width: 992px) {
+  .nav-content {
+    margin-left: 170px;
+    width: 80%;
+  }
+
+  .logo {
+    margin-left: 3%;
+  }
+
+  .item a {
+    margin-left: 70px;
+  }
+
+  .event {
+    margin-left: 10%;
+    margin-top: 20%;
+  }
+
+  .tentang-button {
+    margin-left: 10%;
+  }
+
+  .container {
+    margin-left: 5%;
+  }
+
+  .sec3 {
+    width: 55%;
+    margin-top: 5%;
+  }
+
+  .thumbnailCarousel {
+    margin-top: 2%;
+  }
+
+  .nav-artikel {
+    width: 17%;
+  }
+
+  .artikel-button {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .tmb-artikel a {
+    margin-right: 1%;
+  }
+
+  .teks-artikel-all h4 {
+    width: 20%;
+  }
+
+  .date-artikel-all {
+    margin-left: 19%;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .nav-content {
+    margin-left: 50px;
+    width: 90%;
+  }
+
+  .logo {
+    margin-left: 3%;
+  }
+
+  .item a {
+    margin-left: 30px;
+  }
+
+  .event {
+    margin-left: 5%;
+    margin-top: 15%;
+  }
+
+  .tentang-button {
+    margin-left: 5%;
+  }
+
+  .container {
+    margin-left: 5%;
+  }
+
+  .sec3 {
+    width: 80%;
+    margin-top: 5%;
+  }
+
+  .thumbnailCarousel {
+    margin-top: 2%;
+  }
+
+  .nav-artikel {
+    width: 20%;
+  }
+
+  .artikel-button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tmb-artikel a {
+    margin-right: 1%;
+  }
+
+  .teks-artikel-all h4 {
+    width: 20%;
+  }
+
+  .date-artikel-all {
+    margin-left: 19%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .nav-content {
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .logo {
+    margin-left: 3%;
+  }
+
+  .item {
+    display: none; 
+  }
+
+  .event {
+    margin-left: 5%;
+    margin-top: 15%;
+  }
+
+  .tentang-button {
+    margin-left: 5%;
+  }
+
+  .container {
+    margin-left: 5%;
+  }
+
+  .sec3 {
+    width: 90%;
+    margin-top: 5%;
+  }
+
+  .thumbnailCarousel {
+    margin-top: 2%;
+  }
+
+  .nav-artikel {
+    width: 30%;
+  }
+
+  .artikel-button {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .tmb-artikel a {
+    margin-right: 1%;
+  }
+
+  .teks-artikel-all h4 {
+    width: 30%;
+  }
+
+  .date-artikel-all {
+    margin-left: 5%;
+  }
 }
